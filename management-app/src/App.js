@@ -1,4 +1,5 @@
 import AppContainer from './components/AppContainer'
+import '../src/css/App.css';
 
 function App() {
   return (

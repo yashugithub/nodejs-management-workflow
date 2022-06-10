@@ -1,5 +1,5 @@
 
-const pool = require('../db/pgconnection')
+const pool = require('../database/pgconnection')
 
 const getAllUsers = (request, response) => {
     
@@ -23,8 +23,8 @@ const getUserById = (request, response) => {
     pool.connect().then(client => {
         client.query(`select * from users where id=${request.params.id}`).then(res => {
           console.log('Get user information for user id ', request.params.id);
-          client.release();        
-          response.status(200).json(res.rows);
+          client.release(); 
+          response.status(200).json(res.rows[0]);
         })
         .catch(error => {
           console.log('Error while fetching users information', error.message);

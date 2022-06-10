@@ -7,6 +7,7 @@ const path = require("path");
 const express = require('express');
 const bodyParser = require("body-parser");
 const router = require('./apirouter')
+var cors = require('cors');
 
 const app = express();
 

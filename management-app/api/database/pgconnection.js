@@ -1,7 +1,5 @@
 const Pool = require('pg-pool')
-const dbconfig = require('../config/dbconfig')
-
-console.log('dbconfig.postgresql.userName ===> ', dbconfig.postgresql.userName);
+const dbconfig = require('../../config/dbconfig')
 
 const pool = new Pool({
     user: dbconfig.postgresql.userName,

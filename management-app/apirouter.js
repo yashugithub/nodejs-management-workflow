@@ -1,6 +1,6 @@
 const path = require("path");
 const router = require('express').Router();
-const UserController = require('./controller/UserController');
+const UserController = require('./api/controller/UserController');
 
 // Application heartbeat check
 router.get('/heartbeat', (req, res) =>{
